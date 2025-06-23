@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
 
   // Load TSDF layer from file
   Layer<TsdfVoxel>::Ptr tsdf_layer;
-  std::string file_path = "/usr/home/ws/src/voxblox_docs/test_thoth_05-15.vxblx";
+  std::string file_path = "test_thoth_05-15.vxblx";
 
   // Attempt to load the TSDF layer
   if (!io::LoadLayer<TsdfVoxel>(file_path, &tsdf_layer)) {
@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
   mesh_integrator.generateMesh(/*only_updated_blocks=*/false, /*clear_flags=*/false);
 
   // Save the generated mesh to a PLY file
-  std::string mesh_output_path = "/usr/home/ws/src/voxblox_docs/output_mesh_from_tsdf.ply";
+  std::string mesh_output_path = "output_mesh_from_tsdf.ply";
   if (outputMeshLayerAsPly(mesh_output_path, mesh_layer)) {
     std::cout << "Saved mesh to " << mesh_output_path << std::endl;
   } else {
