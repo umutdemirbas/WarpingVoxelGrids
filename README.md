@@ -2,7 +2,7 @@
 
 This repo is for the "Warping Voxel Grids for 3D Robotic Mapping" Project at ETH Zürich, 3D Vision class. The repo mainly focuses on mesh side of the project. For the integrated ORB-SLAM3 & Voxblox pipeline, see the submodule
 
-## Features
+## Overview
 
 The mesh_edit directory contains the implementation of the Laplacian mesh editing algorithm as well as the mesh reconstruction process. The mesh_raycast directory comprises the source code responsible for locating corresponding points within the keyframes on the mesh.
 
