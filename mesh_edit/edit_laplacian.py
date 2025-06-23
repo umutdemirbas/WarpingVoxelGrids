@@ -288,9 +288,9 @@ def get_all_but_ring_anchors(mesh, center_indices, ring_distance=3):
 if __name__ == "__main__":
     # 1) Load the mesh from file (PLY format)
     # mesh = o3d.io.read_triangle_mesh(data.KnotMesh().path)
-    mesh = o3d.io.read_triangle_mesh("output_mesh_from_tsdf.ply")
+    mesh = o3d.io.read_triangle_mesh("mesh_edit/output_mesh_from_tsdf.ply")
     mesh.compute_vertex_normals()
-    # o3d.visualization.draw_geometries([mesh], window_name="Original Mesh")
+    o3d.visualization.draw_geometries([mesh], window_name="Original Mesh")
 
     # Copy the original mesh for comparison
     orig = copy.deepcopy(mesh)
@@ -338,10 +338,10 @@ if __name__ == "__main__":
     edited = solve_laplacian_editing(mesh, anchor_ids, anchor_pos)
 
     # Save the edited mesh to a file
-    o3d.io.write_triangle_mesh("edited_mesh.ply", edited)
+    o3d.io.write_triangle_mesh("mesh_edit/edited_mesh.ply", edited)
 
     # Read the saved mesh back
-    loaded_mesh = o3d.io.read_triangle_mesh("edited_mesh.ply")
+    loaded_mesh = o3d.io.read_triangle_mesh("mesh_edit/edited_mesh.ply")
     loaded_mesh.compute_vertex_normals()
 
     # Visualize the loaded mesh

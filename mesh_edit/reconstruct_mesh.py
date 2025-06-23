@@ -66,7 +66,7 @@ ball_radius_mx = 0.4
 print("Testing mesh in Open3D...")
 # Reading and computing the mesh
 # armadillo_mesh = o3d.data.BunnyMesh()
-mesh = o3d.io.read_triangle_mesh("edited_mesh.ply")
+mesh = o3d.io.read_triangle_mesh("mesh_edit/edited_mesh.ply")
 mesh.compute_vertex_normals()
 vertices = np.asarray(mesh.vertices)
 # colors = plt.cm.viridis((vertices[:, 1] - vertices[:, 1].min()) / (vertices[:, 1].ptp()))[:, :3]
@@ -187,7 +187,7 @@ print(f"Triangles in reconstructed mesh: {len(np.asarray(meshRecon.triangles))}"
 # =====================
 # Save and Visualize Reconstruction
 # =====================
-o3d.io.write_triangle_mesh("remesh.ply", meshRecon, write_ascii=True)
+o3d.io.write_triangle_mesh("mesh_edit/remesh.ply", meshRecon, write_ascii=True)
 o3d.visualization.draw_geometries([meshRecon], width=1200, height=800)
 
 # # Visualize original and remeshed mesh side by side
