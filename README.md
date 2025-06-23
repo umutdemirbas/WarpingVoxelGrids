@@ -15,8 +15,8 @@ The mesh_edit directory contains the implementation of the Laplacian mesh editin
 ### Steps
 
 ```bash
-git clone https://github.com/yourusername/project-name.git
-cd project-name
+git clone https://github.com/umutdemirbas/WarpingVoxelGrids.git
+cd WarpingVoxelGrids
 pip install -r requirements.txt
 ``` 
 
